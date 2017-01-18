@@ -46,11 +46,28 @@ def greet_person():
 def show_madlib_form():
     """Show the madlibs form"""
 
+    color_choice = request.args.get("color")
+    noun_choice = request.args.get("noun")
+    adjective_choice = request.args.get("adjective")
+
+    return render_template("/madlibs")
+
 #     player_answer = request.args.get("play")
 
 #     if player_answer == "no":
 #         return render_template("goodbye.html",
 #                                 player_answer=play)
+@app.route("/madlibs")
+
+def madlib_results():
+    """Madlib completed form"""
+    return render_template("/hello")
+
+#     color_choice = request.args.get("color")
+#     noun_choice = request.args.get("noun")
+#     adjective_choice = request.args.get("adjective")
+
+  
 
 # @app.route("/goodbye")
 # def say_goodbye():
